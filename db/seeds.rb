@@ -11,6 +11,7 @@
 first_coach = User.create!(
   email: 'basketball_coach@example.com',
   password: 'BallIsLife',
+  full_name: 'Kyrie Irving',
   phone_number: '+1 (917)-942-9777',
   role: :coach
 )
@@ -18,6 +19,7 @@ first_coach = User.create!(
 second_coach = User.create!(
   email: 'life_coach@example.com',
   password: 'LifeCoach4Ever',
+  full_name: 'Deepak Chopra',
   phone_number: '+1 (646)-432-7477',
   role: :coach
 )
@@ -25,6 +27,7 @@ second_coach = User.create!(
 first_customer = User.create!(
   email: 'testuser1@example.com',
   password: 'test_password',
+  full_name: 'Test User 1',
   phone_number: '+1 (917)-483-2847',
   role: :user
 )
@@ -32,6 +35,7 @@ first_customer = User.create!(
 second_customer = User.create!(
   email: 'testuser2@example.com',
   password: 'test_password',
+  full_name: 'Test User 2',
   phone_number: '+1 (212)-538-2947',
   role: :user
 )

@@ -27,13 +27,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_30_165417) do
   end
 
   create_table "open_slots", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.string "title"
+    t.datetime "start"
+    t.datetime "end"
     t.uuid "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["end_time"], name: "index_open_slots_on_end_time"
-    t.index ["start_time"], name: "index_open_slots_on_start_time"
+    t.index ["end"], name: "index_open_slots_on_end"
+    t.index ["start"], name: "index_open_slots_on_start"
     t.index ["user_id"], name: "index_open_slots_on_user_id"
   end
 
@@ -55,6 +56,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_30_165417) do
     t.datetime "remember_created_at"
     t.integer "role", default: 0, null: false
     t.string "phone_number", null: false
+    t.string "full_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

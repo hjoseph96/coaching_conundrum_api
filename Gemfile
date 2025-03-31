@@ -34,6 +34,8 @@ gem "thruster", require: false
 # gem "rack-cors"
 
 gem "devise", "~> 4.9"
+gem "rack-cors"
+
 
 
 group :development, :test do
@@ -45,4 +47,6 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "pry-rails"
 end
