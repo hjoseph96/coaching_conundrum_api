@@ -17,8 +17,8 @@ module CoachingConundrumApi
     config.autoload_lib(ignore: %w[assets tasks])
 
     # Usually would roll JWT, but keep it simple stupid
-    config.session_store :cookie_store, key: "_coaching_conundrum_session", expire_after: 30.days
     config.middleware.use ActionDispatch::Cookies
+    config.session_store :cookie_store, key: "_coaching_conundrum_session", expire_after: 30.days
     config.middleware.use config.session_store, config.session_options
 
 
